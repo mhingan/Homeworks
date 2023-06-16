@@ -30,5 +30,4 @@ homework-<number>/
 ```
 - The `src/` directory contains the Java source code files for the assignment.
 - The `Main.java` file is the main entry point for the Java program.
-- The `README.md` file in each assignment folder includes the assignment description, requirements, and any additional information provided by the instructor.
 
