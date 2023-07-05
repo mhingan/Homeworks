@@ -2,56 +2,76 @@ package org.cursjava.Testing_Tema2;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class DistanceCalculator {
-    public static int calculateDistance(@NotNull String expression) {
-        String[] terms = expression.split("\\s+");
+    private static final Pattern COMPONENT_PATTERN = Pattern.compile("(\\d+)\\s?(\\w+)");
 
-        int result = 0;
-        int operator = 1;
-        for (String term : terms) {
-            if (term.isEmpty()) {
-                continue;
-            } else if (term.equals("+")) {
-                operator = 1;
-                continue;
-            } else if (term.equals("-")) {
-                operator = -1;
-                continue;
-            }
-
-            int value;
-            if (term.matches(".*\\d+.*")) {
-                value = Integer.parseInt(term.replaceAll("[^0-9-]", ""));
-            } else {
-                continue;
-            }
-            String unit = term.replaceAll("[^a-zA-Z]", "").toLowerCase();
-            if (unit.isEmpty()) {
-                continue;
-            }
-            int conversionFactor = getConversionFactor(unit);
-            result += operator * (value * conversionFactor);
+    private static int convertToMillimeters(int value, String unit) {
+        int conversionFactor;
+        switch (unit) {
+            case "mm":
+                conversionFactor = 1;
+                break;
+            case "cm":
+                conversionFactor = 10;
+                break;
+            case "dm":
+                conversionFactor = 100;
+                break;
+            case "m":
+                conversionFactor = 1000;
+                break;
+            case "km":
+                conversionFactor = 1000000;
+                break;
+            default:
+                throw new IllegalArgumentException("Unsupported unit: " + unit);
         }
-        return result;
+        return value * conversionFactor;
+    }
+
+    private static double convertFromMillimeters(int value, String unit) {
+        double conversionFactor;
+        switch (unit) {
+            case "mm":
+                conversionFactor = 1;
+                break;
+            case "cm":
+                conversionFactor = 0.1;
+                break;
+            case "dm":
+                conversionFactor = 0.01;
+                break;
+            case "m":
+                conversionFactor = 0.001;
+                break;
+            case "km":
+                conversionFactor = 0.000001;
+                break;
+            default:
+                throw new IllegalArgumentException("Unsupported unit: " + unit);
+        }
+        return value * conversionFactor;
     }
 
 
 
 
+    public static double computeDistance(String expression, String outputUnit) {
+        Matcher matcher = COMPONENT_PATTERN.matcher(expression);
+        int totalMillimeters = 0;
 
-    private static int getConversionFactor(String unit) {
-        if (unit.isEmpty()) {
-            throw new IllegalArgumentException("Invalid unit: empty string");
+        while (matcher.find()) {
+            int value = Integer.parseInt(matcher.group(1));
+            String unit = matcher.group(2);
+            int mmValue = convertToMillimeters(value, unit);
+            totalMillimeters += mmValue;
         }
 
-        return switch (unit) {
-            case "mm" -> 1;
-            case "cm" -> 10;
-            case "dm" -> 100;
-            case "m" -> 1000;
-            case "km" -> 1000000;
-            default -> throw new IllegalArgumentException("Unsupported unit: " + unit);
-        };
+        double finalValue = convertFromMillimeters(totalMillimeters, outputUnit);
+        return finalValue;
     }
 
 
