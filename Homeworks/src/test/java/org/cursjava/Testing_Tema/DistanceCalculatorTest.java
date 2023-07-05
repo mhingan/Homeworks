@@ -16,6 +16,7 @@ public class DistanceCalculatorTest {
     void computeDistance_ParameterizedTest(String expression, String outputUnit, double expected) {
         double result = DistanceCalculator.computeDistance(expression, outputUnit);
         assertEquals(expected, result);
+        System.out.println("Parametrized test passed successfully!");
     }
 
     @Test
@@ -25,5 +26,6 @@ public class DistanceCalculatorTest {
         double expected = 1100.0;
         double result = DistanceCalculator.computeDistance(expression, outputUnit);
         assertEquals(expected, result);
+        System.out.println("Test passed successfully!");
     }
 }
