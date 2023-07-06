@@ -17,6 +17,13 @@ To use this repository effectively, follow these steps:
 5. Test your code locally and ensure it meets the specified requirements.
 
 
+## Contents
+1. OOP - > Phone Application
+2. Object Containers -> ObjectContainers_Tema & ObjectContainers_Tema2_Optional
+3. Testing -> Testing Tema
+-------> to be continued
+
+
 ## Additional Notes
 
 - Each homework assignment is stored in a separate folder within the repository.
