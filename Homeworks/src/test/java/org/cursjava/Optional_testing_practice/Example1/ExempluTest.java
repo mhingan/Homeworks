@@ -1,5 +1,6 @@
-package org.cursjava.Optional_testing_practice;
+package org.cursjava.Optional_testing_practice.Example1;
 
+import org.cursjava.Optional_testing_practice.Example1.Exemplu;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -40,10 +41,17 @@ class ExempluTest {
 
 
     @Test
-    public void test_evenNumber_withSuccess(){
+    public void test_evenNumber_success(){
         System.out.println("check even number with success");
-        int result = testObject.evenNumber(8);
-        assertEquals(8, result);
+        boolean result = testObject.evenNumber(8);
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void test_evenNumber_fail(){
+        System.out.println("check even number with success");
+        boolean result = testObject.evenNumber(9);
+        assertEquals(false, result);
     }
 
 
