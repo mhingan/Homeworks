@@ -6,7 +6,7 @@ public class BiathlonResult {
     private double secondShootingRange;
     private double thirdShootingRange;
 
-    public BiathlonResult(double skiTimeResult, double firstShootingRange, double secondShootingRange, double thirdShootingRange){
+    public BiathlonResult(double skiTimeResult, double firstShootingRange, double secondShootingRange, double thirdShootingRange) {
         this.skiTimeResult = skiTimeResult;
         this.firstShootingRange = firstShootingRange;
         this.secondShootingRange = secondShootingRange;
@@ -43,6 +43,16 @@ public class BiathlonResult {
 
     public void setThirdShootingRange(double thirdShootingRange) {
         this.thirdShootingRange = thirdShootingRange;
+    }
+
+    public String getBiathlonResults() {
+        return "Biathlon results:\n" +
+                "\nskiTime: " + skiTimeResult +
+                ",\nfirstShootingRange=" + firstShootingRange +
+                ",\nsecondShootingRange=" + secondShootingRange +
+                ",\nthirdShootingRange=" + thirdShootingRange;
+
+
     }
 
     @Override
