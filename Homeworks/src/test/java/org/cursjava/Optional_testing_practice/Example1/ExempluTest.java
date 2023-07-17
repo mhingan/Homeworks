@@ -1,6 +1,6 @@
 package org.cursjava.Optional_testing_practice.Example1;
 
-import org.cursjava.Optional_testing_practice.Example1.Exemplu;
+import org.cursjava.EXTRA_EXERCITII.Optional_testing_practice.Example1.Exemplu;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;

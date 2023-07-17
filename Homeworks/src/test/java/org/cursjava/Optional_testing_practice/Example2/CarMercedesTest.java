@@ -1,5 +1,6 @@
 package org.cursjava.Optional_testing_practice.Example2;
 
+import org.cursjava.EXTRA_EXERCITII.Optional_testing_practice.Example2.CarMercedes;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
