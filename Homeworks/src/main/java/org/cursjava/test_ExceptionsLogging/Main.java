@@ -1,6 +1,6 @@
-package org.cursjava.Exceptions_Logging_Homework;
+package org.cursjava.test_ExceptionsLogging;
 
-import org.cursjava.Exceptions_Logging_Homework.Exceptions.ValidatingConditionsException;
+import org.cursjava.test_ExceptionsLogging.Exceptions.ValidatingConditionsException;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package org.cursjava.Exceptions_Logging_Homework.Exceptions;
+package org.cursjava.test_ExceptionsLogging.Exceptions;
 
 public class CNPException extends Exception{
     public CNPException(){

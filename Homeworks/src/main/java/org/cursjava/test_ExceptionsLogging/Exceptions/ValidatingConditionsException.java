@@ -1,6 +1,4 @@
-package org.cursjava.Exceptions_Logging_Homework.Exceptions;
-
-import org.cursjava.PhoneApp.Message;
+package org.cursjava.test_ExceptionsLogging.Exceptions;
 
 public class ValidatingConditionsException extends Exception {
     public ValidatingConditionsException(){

@@ -1,6 +1,5 @@
-package org.cursjava.Exceptions_Logging_Homework;
+package org.cursjava.test_ExceptionsLogging;
 
-import org.cursjava.Exceptions_Logging_Homework.Exceptions.ValidatingConditionsException;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
