@@ -21,7 +21,9 @@ To use this repository effectively, follow these steps:
 1. OOP - > Phone Application
 2. Object Containers -> ObjectContainers_Tema & ObjectContainers_Tema2_Optional
 3. Testing -> Testing Tema
--------> to be continued
+4. IO & Enums
+5. Exception & Logging
+6. Unit Tets
 
 
 ## Additional Notes
