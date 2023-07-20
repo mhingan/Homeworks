@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-07-20T11:10:54.763598Z</date>
+  <millis>1689851454763</millis>
+  <nanos>598000</nanos>
+  <sequence>0</sequence>
+  <logger>org.cursjava.Exceptions_Logging.StudentRepository</logger>
+  <level>INFO</level>
+  <class>org.cursjava.Exceptions_Logging.StudentRepository</class>
+  <method>validateStudent</method>
+  <thread>1</thread>
+  <message>Student validation: STARTING.</message>
+</record>
+<record>
+  <date>2023-07-20T11:10:54.811726Z</date>
+  <millis>1689851454811</millis>
+  <nanos>726000</nanos>
+  <sequence>1</sequence>
+  <logger>org.cursjava.Exceptions_Logging.StudentRepository</logger>
+  <level>SEVERE</level>
+  <class>org.cursjava.Exceptions_Logging.StudentRepository</class>
+  <method>validateStudent</method>
+  <thread>1</thread>
+  <message>ID is longer / shorter than 13.</message>
+</record>
+</log>
