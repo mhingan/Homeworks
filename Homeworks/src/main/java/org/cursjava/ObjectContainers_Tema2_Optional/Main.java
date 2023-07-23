@@ -54,29 +54,30 @@ public class Main {
      **/
     //Creating a method called bubbleSort. As a entry parameter we provide the List of SalesRepresentative, using this method we sort descending the list;
     public static void bubbleSort(List<SalesRepresentative> list) {
-        int n = list.size();
-        boolean swapped;
+            int n = list.size();
+            boolean swapped;
 
-        for (int i = 0; i < n - 1; i++) {
-            swapped = false;
-            for (int j = 0; j < n - i - 1; j++) {
-                SalesRepresentative current = list.get(j);
-                SalesRepresentative next = list.get(j + 1);
+            for (int i = 0; i < n - 1; i++) {
+                swapped = false;
+                for (int j = 0; j < n - i - 1; j++) {
+                    SalesRepresentative current = list.get(j);
+                    SalesRepresentative next = list.get(j + 1);
 
-                if (current.getWorthOfSales() < next.getWorthOfSales()) {
-                    list.set(j, next);
-                    list.set(j + 1, current);
-                    swapped = true;
+                    // "<" indica daca vrem sa afisam crescator sau descrescator lista;
+                    if (current.getWorthOfSales() < next.getWorthOfSales()) {
+                        list.set(j, next);
+                        list.set(j + 1, current);
+                        swapped = true;
+                    }
+                }
+                    //swapped == false;
+                if (!swapped) {
+                    break;
                 }
             }
 
-            if (!swapped) {
-                break;
-            }
+
         }
-
-
-    }
 
 
 }
