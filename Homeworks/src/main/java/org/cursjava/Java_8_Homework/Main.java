@@ -10,6 +10,7 @@ public class Main {
         String newFileName = "src/main/resources/Java8/PersonsWithAge.txt";
 
         PersonHandler personHandler = new PersonHandler();
+        System.out.println("List of persons with a specific age and sorted by name: ");
         personHandler.getPersonsWithAge(fileName, newFileName, 21);
     }
 }
