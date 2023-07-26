@@ -1,0 +1,12 @@
+Ana,Marc,12.12.2002
+Michael,Austin,12.12.2000
+John,Smith,04.08.1995
+Emily,Johnson,17.06.1998
+Daniel,Lee,23.09.1994
+Sarah,Miller,21.10.2002
+David,Wilson,30.07.1996
+Olivia,Brown,21.02.2001
+Christopher,Davis,14.05.1997
+Sophia,Taylor,12.01.2002
+James,Anderson,02.10.1993
+Ava,Martinez,09.01.2005
