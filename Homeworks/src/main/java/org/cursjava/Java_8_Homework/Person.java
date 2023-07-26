@@ -4,7 +4,17 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Objects;
 
+
 public class Person {
+    /**
+     * The Person class represents a person with attributes such as first name, last name, and date of birth.
+     * It provides methods to access and manipulate these attributes, including calculating the person's age.
+     *
+     * @param - firstName   The first name of the person.
+     * @param - lastName    The last name of the person.
+     * @param  - dateOfBirth The date of birth of the person as a LocalDate object.
+     */
+
     private String firstName;
     private String lastName;
     private LocalDate dateOfBirth;
