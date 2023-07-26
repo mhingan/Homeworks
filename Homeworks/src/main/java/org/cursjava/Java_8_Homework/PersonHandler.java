@@ -1,5 +1,6 @@
 package org.cursjava.Java_8_Homework;
 
+import org.cursjava.Exceptions_Logging.StudentRepository;
 import org.cursjava.Java_8_Homework.Exceptions.PersonNotFoundException;
 
 import java.io.*;
@@ -9,6 +10,10 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.List;
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class PersonHandler {
@@ -24,7 +29,26 @@ public class PersonHandler {
      * @throws PersonNotFoundException If there are no persons with the specified age;
      */
 
+
+    /**
+     * Configure the Logger in order to store all the info/warnings into a file called: logs.txt
+     **/
+    private static Logger logger = Logger.getLogger(StudentRepository.class.getName());
+
+    static {
+        try {
+            /*Configure the Logger to use FileHandler in order to write in log.txt**/
+            Handler fileHandler = new FileHandler("src/main/resources/Java8/Logs.txt");
+            logger.addHandler(fileHandler);
+            /*Setting the logger to store all the messages/info/warnings...etc..**/
+            logger.setLevel(Level.ALL);
+        } catch (IOException e) {
+            System.err.println("FileHandler for Logger can't be configured.");
+        }
+    }
+
     public void getPersonsWithAge(String fileName, String newFileName, int age) throws IOException, PersonNotFoundException {
+        logger.info("GETTING PERSON WITH AGE: started....");
         int todayYear = LocalDate.now().getYear();
 
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
@@ -51,6 +75,7 @@ public class PersonHandler {
 
 
         if (personList.isEmpty()) {
+            logger.severe("Person with age " + age + " was not found.");
             throw new PersonNotFoundException("Person with age " + age + " was not found.");
         }
 
@@ -61,5 +86,6 @@ public class PersonHandler {
         }
 
         System.out.println(personList);
+        logger.info("GETTING PERSON WITH AGE: finished.");
     }
 }

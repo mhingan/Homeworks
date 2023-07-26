@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-07-26T15:06:50.219014Z</date>
+  <millis>1690384010219</millis>
+  <nanos>14000</nanos>
+  <sequence>0</sequence>
+  <logger>org.cursjava.Exceptions_Logging.StudentRepository</logger>
+  <level>INFO</level>
+  <class>org.cursjava.Java_8_Homework.PersonHandler</class>
+  <method>getPersonsWithAge</method>
+  <thread>1</thread>
+  <message>GETTING PERSON WITH AGE: started....</message>
+</record>
+<record>
+  <date>2023-07-26T15:06:50.309935Z</date>
+  <millis>1690384010309</millis>
+  <nanos>935000</nanos>
+  <sequence>1</sequence>
+  <logger>org.cursjava.Exceptions_Logging.StudentRepository</logger>
+  <level>INFO</level>
+  <class>org.cursjava.Java_8_Homework.PersonHandler</class>
+  <method>getPersonsWithAge</method>
+  <thread>1</thread>
+  <message>GETTING PERSON WITH AGE: finished.</message>
+</record>
+</log>
