@@ -24,6 +24,9 @@ To use this repository effectively, follow these steps:
 4. IO & Enums
 5. Exception & Logging
 6. Unit Tets
+7. Java 8
+8. Database JDBC
+9. Concurrency
 
 
 ## Additional Notes
