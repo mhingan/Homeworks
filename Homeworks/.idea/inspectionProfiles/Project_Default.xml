@@ -2,7 +2,7 @@
   <profile version="1.0">
     <option name="myName" value="Project Default" />
     <inspection_tool class="JavadocDeclaration" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="ADDITIONAL_TAGS" value="toString,PhoneClass,Samsung,addContact,viewContact,sendMessage,viewMessage,call,viewCallHistory,IPhone,street,city,country,getCountry,name,frecuency,List&lt;Address&gt;,getName;,addHobby,BubbleSort,calculateStandings,addStudent,deleteStudent,returnStudentsWithAge,getPersonWithAge" />
+      <option name="ADDITIONAL_TAGS" value="toString,PhoneClass,Samsung,addContact,viewContact,sendMessage,viewMessage,call,viewCallHistory,IPhone,street,city,country,getCountry,name,frecuency,List&lt;Address&gt;,getName;,addHobby,BubbleSort,calculateStandings,addStudent,deleteStudent,returnStudentsWithAge,getPersonWithAge"  />
     </inspection_tool>
   </profile>
 </component>
