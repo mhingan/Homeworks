@@ -7,50 +7,26 @@ public class DistanceCalculator {
     private static final Pattern COMPONENT_PATTERN = Pattern.compile("(\\d+)\\s?(\\w+)");
 
     private static int convertToMillimeters(int value, String unit) {
-        int conversionFactor;
-        switch (unit) {
-            case "mm":
-                conversionFactor = 1;
-                break;
-            case "cm":
-                conversionFactor = 10;
-                break;
-            case "dm":
-                conversionFactor = 100;
-                break;
-            case "m":
-                conversionFactor = 1000;
-                break;
-            case "km":
-                conversionFactor = 1000000;
-                break;
-            default:
-                throw new IllegalArgumentException("Unsupported unit: " + unit);
-        }
+        int conversionFactor = switch (unit) {
+            case "mm" -> 1;
+            case "cm" -> 10;
+            case "dm" -> 100;
+            case "m" -> 1000;
+            case "km" -> 1000000;
+            default -> throw new IllegalArgumentException("Unsupported unit: " + unit);
+        };
         return value * conversionFactor;
     }
 
     private static double convertFromMillimeters(int value, String unit) {
-        double conversionFactor;
-        switch (unit) {
-            case "mm":
-                conversionFactor = 1;
-                break;
-            case "cm":
-                conversionFactor = 0.1;
-                break;
-            case "dm":
-                conversionFactor = 0.01;
-                break;
-            case "m":
-                conversionFactor = 0.001;
-                break;
-            case "km":
-                conversionFactor = 0.000001;
-                break;
-            default:
-                throw new IllegalArgumentException("Unsupported unit: " + unit);
-        }
+        double conversionFactor = switch (unit) {
+            case "mm" -> 1;
+            case "cm" -> 0.1;
+            case "dm" -> 0.01;
+            case "m" -> 0.001;
+            case "km" -> 0.000001;
+            default -> throw new IllegalArgumentException("Unsupported unit: " + unit);
+        };
         return value * conversionFactor;
     }
 
