@@ -1,7 +1,5 @@
 package org.cursjava.ObjectContainers_Tema;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Address {
     /**
      * Creating the variables for my Address list class;

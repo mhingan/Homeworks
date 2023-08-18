@@ -1,9 +1,6 @@
 package org.cursjava.EXTRA_EXERCITII.Optional_testing_practice.Example2;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.awt.*;
-import java.util.List;
 
 public class CarMercedes {
     private String model;
