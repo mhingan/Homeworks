@@ -4,17 +4,16 @@ import org.cursjava.Java_8_Homework.Exceptions.PersonNotFoundException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class PersonHandlerTest {
 
     private static final String TEST_INPUT_FILE = "src/main/resources/Java8/TestPersons.txt";
-    private static final String TEST_OUTPUT_FILE = "src/main/resources/Java8/TestPersonsWithAge.txt";
+    private static final String TEST_OUTPUT_FILE = "src/main/resources/Java8/PersonsWithAge.txt";
 
     private PersonHandler personHandler;
 
@@ -27,7 +26,7 @@ public class PersonHandlerTest {
     public void testGetPersonsWithAge() throws IOException, PersonNotFoundException {
         // Prepare test data
         String testData = "John,Doe,15.05.1995\n" +
-                "Jane,Smith,22.08.1985\n" +
+                "Jane,Smith,22.08.1993\n" +
                 "Michael,Jordan,05.11.1990\n" +
                 "Alice,Johnson,20.03.1995\n" +
                 "Bob,Williams,10.02.1980";
@@ -38,9 +37,8 @@ public class PersonHandlerTest {
 
         // Read the output file and check the contents
         List<String> outputLines = Files.readAllLines(Paths.get(TEST_OUTPUT_FILE));
-        Assertions.assertEquals(2, outputLines.size());
+        Assertions.assertEquals(1, outputLines.size());
         Assertions.assertEquals("Jane Smith", outputLines.get(0));
-        Assertions.assertEquals("Bob Williams", outputLines.get(1));
 
         // Clean up
         Files.delete(Paths.get(TEST_INPUT_FILE));

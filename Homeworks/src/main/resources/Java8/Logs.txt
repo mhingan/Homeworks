@@ -2,9 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2023-07-26T15:06:50.219014Z</date>
-  <millis>1690384010219</millis>
-  <nanos>14000</nanos>
+  <date>2023-08-18T08:15:33.391238Z</date>
+  <millis>1692346533391</millis>
+  <nanos>238000</nanos>
   <sequence>0</sequence>
   <logger>org.cursjava.Exceptions_Logging.StudentRepository</logger>
   <level>INFO</level>
@@ -14,9 +14,9 @@
   <message>GETTING PERSON WITH AGE: started....</message>
 </record>
 <record>
-  <date>2023-07-26T15:06:50.309935Z</date>
-  <millis>1690384010309</millis>
-  <nanos>935000</nanos>
+  <date>2023-08-18T08:15:33.461601Z</date>
+  <millis>1692346533461</millis>
+  <nanos>601000</nanos>
   <sequence>1</sequence>
   <logger>org.cursjava.Exceptions_Logging.StudentRepository</logger>
   <level>INFO</level>

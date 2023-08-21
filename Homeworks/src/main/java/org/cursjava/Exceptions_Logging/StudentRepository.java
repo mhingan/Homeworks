@@ -5,7 +5,6 @@ import org.cursjava.Exceptions_Logging.Exceptions.GenderVerificationException;
 import org.cursjava.Exceptions_Logging.Exceptions.NameVerificationException;
 import org.cursjava.Exceptions_Logging.Exceptions.StudentValidationException;
 
-
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Period;

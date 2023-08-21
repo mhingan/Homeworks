@@ -1,7 +1,6 @@
 package org.cursjava.IO_Enums_Homework.Comparators;
 
 import org.cursjava.IO_Enums_Homework.Athlete;
-import org.cursjava.IO_Enums_Homework.Medals;
 
 import java.util.Comparator;
 
