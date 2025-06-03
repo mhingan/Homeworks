@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import java.awt.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CarMercedesTest {
     @BeforeAll

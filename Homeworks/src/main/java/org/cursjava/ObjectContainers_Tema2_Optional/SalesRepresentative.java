@@ -1,7 +1,5 @@
 package org.cursjava.ObjectContainers_Tema2_Optional;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.List;
 
 public class SalesRepresentative {
